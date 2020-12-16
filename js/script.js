@@ -93,7 +93,7 @@ let quoteBox = document.getElementById('quote-box');
 ***/
 
  function getRandomQuote() {
-   let randomNumber = Math.floor(Math.random() * Object.keys(quotes).length);
+   let randomNumber = Math.floor(Math.random() * quotes.length);
    return quotes[randomNumber];
  }
 
