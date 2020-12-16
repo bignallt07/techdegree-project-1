@@ -1,2 +1,4 @@
 # techdegree-project-1
  Random Quote Generator
+
+Notes for review:
