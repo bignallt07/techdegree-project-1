@@ -142,12 +142,12 @@ function printQuote() {
  */
 
 function changeBackground() {
-  let list = [];
+  let rgbList = [];
   for (let i = 0; i < 3; i++) {
-    let value = Math.floor(Math.random() * 256);
-    list.push(value);
+    let rgbItem = Math.floor(Math.random() * 256);
+    rgbList.push(rgbItem);
   }
-  return `rgb(${list[0]}, ${list[1]}, ${list[2]})`;
+  return `rgb(${rgbList[0]}, ${rgbList[1]}, ${rgbList[2]})`;
 }
 
 /******************************
