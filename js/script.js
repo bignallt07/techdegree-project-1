@@ -9,6 +9,7 @@ project 1 - A Random Quote Generator
 
 /******************************
  * `quotes` array 
+ * x10 quotes in array
 *******************************/
 const quotes = [
   {
@@ -84,10 +85,10 @@ let quoteBox = document.getElementById('quote-box');
  * Functions
  ******************************/
 
-/***
+/**
  * `getRandomQuote` function
  * 
- * Description: Creates a random number using Math objects. Using the length of the array of objects as a high number
+ * Description: Creates a random number using Math properties and methods. Using the length of the array of objects as a high number
  * 
  * @returns {Array Item} - Holding 1 object from the array of objects
 ***/
@@ -97,7 +98,7 @@ let quoteBox = document.getElementById('quote-box');
    return quotes[randomNumber];
  }
 
-/***
+/**
  * `printQuote` function
  * 
  * Description: Calls the getRandomQuote function which returns one quote objects 
@@ -105,7 +106,7 @@ let quoteBox = document.getElementById('quote-box');
  *              Then it tests whether the object has a citation, year and team. 
  * 
  * @returns { variable } - returns the FULL STRING, but along with a style
-***/
+*/
 
 function printQuote() {
   let quote = getRandomQuote();
@@ -134,16 +135,19 @@ function printQuote() {
 /**
  * 'changeBackground' function
  * 
- *  Description: Explain that we wanted to keep it to one function
+ *  Description: Uses a 'for loop' to 3 random numbers between 0 and 256 that are stored in an array
+ *  The array is then accessed using template literals in the return statement. Providing a RGB value
  * 
- * @returns {STRING} - a random RGB value
+ *  @returns {STRING} - a random RGB value
  */
 
 function changeBackground() {
-  const red = Math.floor(Math.random() * 256);
-  const green = Math.floor(Math.random() * 256);
-  const blue = Math.floor(Math.random() * 256);
-  return `rgb(${red}, ${green}, ${blue})`;
+  let list = [];
+  for (let i = 0; i < 3; i++) {
+    let value = Math.floor(Math.random() * 256);
+    list.push(value);
+  }
+  return `rgb(${list[0]}, ${list[1]}, ${list[2]})`;
 }
 
 /******************************
